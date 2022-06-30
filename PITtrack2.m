@@ -72,8 +72,11 @@ if ~isfield(placedData,'Sdist')
         placedData(nf).Sdist = Sdist;
         placedData(nf).Ndist = Ndist;
     end
+elseif ~isfield(placedData,'Ndist')
+    for nf = 1:nftot
+        placedData(nf).Ndist = NaN;
+    end
 end
-
 % use taglist to cut labData to only the requested particles
 if ~isempty(taglist)
     % shorten the labdata to only the requested tags
