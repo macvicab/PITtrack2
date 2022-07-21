@@ -10,9 +10,9 @@ def_data.writeTravelLength = 1;
 
 if site == 1
     def_data.D50 = 37; % mm
-    def_data.szcat = 2.^[5:1:8];
-    def_data.fdir = 'Ganatsekaigon\';
-    def_data.fchar = 'Tag Characteristics 2.csv';
-    def_data.thalname = 'GCrk_Thalweg_rev.csv';
-    def_data.taglist = 'DS_Ganny_tagnum.csv';
+    def_data.szcat = 2.^[5:1:8]; % size categories in -phi values (log base 2 classification system)
+    def_data.fdir = 'Ganatsekaigon\'; % directory path
+    def_data.fchar = 'Tag Characteristics 2.csv'; % name of file that contains tracer characteristics such as sizes
+    def_data.thalname = 'GCrk_Thalweg_rev.csv'; % name of file that has the thalweg data
+    def_data.taglist = 'DS_Ganny_tagnum.csv'; % list of tag numbers to include in analysis (may be a subset of all tags in river)
 end
